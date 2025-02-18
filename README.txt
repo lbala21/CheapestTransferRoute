@@ -13,19 +13,19 @@
    ./mvnw spring-boot:run
 
 
-##Example of CRUL requests and response for API:
+##Example of CURL requests and response for API:
 
-curl -X POST http://localhost:8081/api/cheapest-route \
--H "Content-Type: application/json" \
--d '{
-  "maxWeight": 15,
-  "availableTransfers": [
-    { "weight": 5, "cost": 10 },
-    { "weight": 10, "cost": 20 },
-    { "weight": 3, "cost": 5 },
-    { "weight": 8, "cost": 15 }
-  ]
-}'
+curl -X POST "http://localhost:8081/api/cheapest-route" `
+  -H "Content-Type: application/json" `
+  --data '{
+    \"maxWeight\": 15,
+    \"availableTransfers\": [
+      { \"weight\": 5, \"cost\": 10 },
+      { \"weight\": 10, \"cost\": 20 },
+      { \"weight\": 3, \"cost\": 5 },
+      { \"weight\": 8, \"cost\": 15 }
+    ]
+  }'
 # Expected Response:
 # {
 #   "selectedTransfers": [
@@ -37,16 +37,16 @@ curl -X POST http://localhost:8081/api/cheapest-route \
 # }
 
 
-curl -X POST http://localhost:8081/api/cheapest-route \
--H "Content-Type: application/json" \
--d '{
-  "maxWeight": 5,
-  "availableTransfers": [
-    { "weight": 6, "cost": 10 },
-    { "weight": 7, "cost": 15 },
-    { "weight": 8, "cost": 20 }
-  ]
-}'
+curl -X POST "http://localhost:8081/api/cheapest-route" `
+  -H "Content-Type: application/json" `
+  --data '{
+    \"maxWeight\": 5,
+    \"availableTransfers\": [
+      { \"weight\": 6, \"cost\": 10 },
+      { \"weight\": 7, \"cost\": 15 },
+      { \"weight\": 8, \"cost\": 20 }
+    ]
+  }'
 # Expected Response:
 # {
 #   "selectedTransfers": [],
@@ -55,16 +55,16 @@ curl -X POST http://localhost:8081/api/cheapest-route \
 # }
 
 
-curl -X POST http://localhost:8081/api/cheapest-route \
--H "Content-Type: application/json" \
--d '{
-  "maxWeight": 8,
-  "availableTransfers": [
-    { "weight": 3, "cost": 5 },
-    { "weight": 8, "cost": 10 },
-    { "weight": 2, "cost": 3 }
-  ]
-}'
+curl -X POST "http://localhost:8081/api/cheapest-route" `
+  -H "Content-Type: application/json" `
+  --data '{
+    \"maxWeight\": 8,
+    \"availableTransfers\": [
+      { \"weight\": 3, \"cost\": 5 },
+      { \"weight\": 8, \"cost\": 10 },
+      { \"weight\": 2, \"cost\": 3 }
+    ]
+  }'
 # Expected Response:
 # {
 #   "selectedTransfers": [
@@ -75,17 +75,17 @@ curl -X POST http://localhost:8081/api/cheapest-route \
 # }
 
 
-curl -X POST http://localhost:8081/api/cheapest-route \
--H "Content-Type: application/json" \
--d '{
-  "maxWeight": 10,
-  "availableTransfers": [
-    { "weight": 5, "cost": 6 },
-    { "weight": 5, "cost": 5 },
-    { "weight": 8, "cost": 20 },
-    { "weight": 2, "cost": 3 }
-  ]
-}'
+curl -X POST "http://localhost:8081/api/cheapest-route" `
+  -H "Content-Type: application/json" `
+  --data '{
+    \"maxWeight\": 10,
+    \"availableTransfers\": [
+      { \"weight\": 5, \"cost\": 6 },
+      { \"weight\": 5, \"cost\": 5 },
+      { \"weight\": 8, \"cost\": 20 },
+      { \"weight\": 2, \"cost\": 3 }
+    ]
+  }'
 # Expected Response:
 # {
 #   "selectedTransfers": [
@@ -97,15 +97,15 @@ curl -X POST http://localhost:8081/api/cheapest-route \
 # }
 
 
-curl -X POST http://localhost:8081/api/cheapest-route \
--H "Content-Type: application/json" \
--d '{
-  "maxWeight": 4,
-  "availableTransfers": [
-    { "weight": 6, "cost": 7 },
-    { "weight": 2, "cost": 3 }
-  ]
-}'
+curl -X POST "http://localhost:8081/api/cheapest-route" `
+  -H "Content-Type: application/json" `
+  --data '{
+    \"maxWeight\": 4,
+    \"availableTransfers\": [
+      { \"weight\": 6, \"cost\": 7 },
+      { \"weight\": 2, \"cost\": 3 }
+    ]
+  }'
 # Expected Response:
 # {
 #   "selectedTransfers": [
@@ -115,18 +115,17 @@ curl -X POST http://localhost:8081/api/cheapest-route \
 #   "totalWeight": 2
 # }
 
-
-curl -X POST http://localhost:8081/api/cheapest-route \
--H "Content-Type: application/json" \
--d '{
-  "maxWeight": 30,
-  "availableTransfers": [
-    { "weight": 5, "cost": 10 },
-    { "weight": 10, "cost": 20 },
-    { "weight": 3, "cost": 5 },
-    { "weight": 8, "cost": 15 }
-  ]
-}'
+curl -X POST "http://localhost:8081/api/cheapest-route" `
+  -H "Content-Type: application/json" `
+  --data '{
+    \"maxWeight\": 30,
+    \"availableTransfers\": [
+      { \"weight\": 5, \"cost\": 10 },
+      { \"weight\": 10, \"cost\": 20 },
+      { \"weight\": 3, \"cost\": 5 },
+      { \"weight\": 8, \"cost\": 15 }
+    ]
+  }'
 # Expected Response:
 # {
 #   "selectedTransfers": [
